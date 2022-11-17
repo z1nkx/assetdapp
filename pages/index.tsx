@@ -12,10 +12,10 @@ import styles from "../styles/Theme.module.css";
 
 // Put Your Edition Drop Contract address from the dashboard here
 const myEditionDropContractAddress =
-  "0x11232C2cd1757C3e4f78dcda318Bdfc6Bc5873A3";
+  "0x884881f636FB18F5BACe56A8C0fe4aaB61872289";
 
 // Put your token ID here
-const tokenId = 0;
+const tokenId = 2;
 
 const Home: NextPage = () => {
   const { contract: editionDrop } = useContract(myEditionDropContractAddress);
@@ -69,7 +69,6 @@ const Home: NextPage = () => {
                   {/* Claimed supply so far */}
                   <b>{activeClaimCondition.currentMintSupply}</b>
                   {" / "}
-                  {activeClaimCondition.maxQuantity}
                 </p>
               ) : (
                 // Show loading state if we're still loading the supply
@@ -95,12 +94,7 @@ const Home: NextPage = () => {
               <button
                 className={`${styles.quantityControlButton}`}
                 onClick={() => setQuantity(quantity + 1)}
-                disabled={
-                  quantity >=
-                  parseInt(
-                    activeClaimCondition?.quantityLimitPerTransaction || "0"
-                  )
-                }
+              
               >
                 +
               </button>
@@ -126,8 +120,8 @@ const Home: NextPage = () => {
       </div>
       {/* Powered by thirdweb */}{" "}
       <img
-        src={`/logo.png`}
-        alt="Thirdweb Logo"
+        src={`/z1logo.jpg`}
+        alt="z1 Logo"
         width={135}
         className={styles.buttonGapTop}
       />
