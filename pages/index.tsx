@@ -15,7 +15,7 @@ const myEditionDropContractAddress =
   "0x884881f636FB18F5BACe56A8C0fe4aaB61872289";
 
 // Put your token ID here
-const tokenId = 2;
+const tokenId = 0;
 
 const Home: NextPage = () => {
   const { contract: editionDrop } = useContract(myEditionDropContractAddress);
@@ -69,6 +69,7 @@ const Home: NextPage = () => {
                   {/* Claimed supply so far */}
                   <b>{activeClaimCondition.currentMintSupply}</b>
                   {" / "}
+                  {activeClaimCondition.maxClaimableSupply}
                 </p>
               ) : (
                 // Show loading state if we're still loading the supply
@@ -94,7 +95,12 @@ const Home: NextPage = () => {
               <button
                 className={`${styles.quantityControlButton}`}
                 onClick={() => setQuantity(quantity + 1)}
-              
+                disabled={
+                  quantity >=
+                  parseInt(
+                    activeClaimCondition?.maxClaimablePerWallet || "1"
+                  )
+                }
               >
                 +
               </button>
@@ -109,10 +115,10 @@ const Home: NextPage = () => {
                 onSuccess={(result) => alert("Claimed!")}
                 // If the function fails, we can do something here.
                 onError={(error) => alert(error?.message)}
-                accentColor="#f213a4"
+                accentColor="#41b9ff"
                 colorMode="dark"
               >
-                Mint {quantity} NFT{quantity > 1 ? "s" : ""}
+                Mint {quantity} NFT{quantity > 1 ? "s" : "($75Z1)"}
               </Web3Button>
             </div>
           </>
