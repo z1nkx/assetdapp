@@ -15,13 +15,15 @@ const myEditionDropContractAddress =
   "0x884881f636FB18F5BACe56A8C0fe4aaB61872289";
 
 // Put your token ID here
-const tokenId = 0;
+
 
 const Home: NextPage = () => {
   const { contract: editionDrop } = useContract(myEditionDropContractAddress);
 
   // The amount the user claims, updates when they type a value into the input field.
-  const [quantity, setQuantity] = useState<number>(1); // default to 1
+  // default to 1
+
+  const [tokenId, setTokenId] = useState<number>(0)
 
   // Load contract metadata
   const { data: contractMetadata } = useContractMetadata(editionDrop);
@@ -80,27 +82,23 @@ const Home: NextPage = () => {
 
           {/* Show claim button or connect wallet button */}
           <>
-            <p>Quantity</p>
+            <p>SelectNFT#</p>
             <div className={styles.quantityContainer}>
               <button
                 className={`${styles.quantityControlButton}`}
-                onClick={() => setQuantity(quantity - 1)}
-                disabled={quantity <= 1}
+                onClick={() => setTokenId(tokenId - 1)}
+                disabled={tokenId <= 0}
               >
                 -
               </button>
 
-              <h4>{quantity}</h4>
+              <h4>{tokenId}</h4>
+
 
               <button
                 className={`${styles.quantityControlButton}`}
-                onClick={() => setQuantity(quantity + 1)}
-                disabled={
-                  quantity >=
-                  parseInt(
-                    activeClaimCondition?.maxClaimablePerWallet || "1"
-                  )
-                }
+                onClick={() => setTokenId(tokenId + 1)}
+                disabled={tokenId === 2}
               >
                 +
               </button>
@@ -109,7 +107,7 @@ const Home: NextPage = () => {
               <Web3Button
                 contractAddress={myEditionDropContractAddress}
                 action={async (contract) =>
-                  await contract.erc1155.claim(tokenId, quantity)
+                  await contract.erc1155.claim(tokenId, 1)
                 }
                 // If the function is successful, we can do something here.
                 onSuccess={(result) => alert("Claimed!")}
@@ -118,7 +116,7 @@ const Home: NextPage = () => {
                 accentColor="#41b9ff"
                 colorMode="dark"
               >
-                Mint {quantity} NFT{quantity > 1 ? "s" : "($75Z1)"}
+                Mint #{tokenId} - ($75Z1)
               </Web3Button>
             </div>
           </>
