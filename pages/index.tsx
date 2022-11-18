@@ -82,7 +82,7 @@ const Home: NextPage = () => {
 
           {/* Show claim button or connect wallet button */}
           <>
-            <p>SelectNFT#</p>
+            <p>Select NFT - $75Z1</p>
             <div className={styles.quantityContainer}>
               <button
                 className={`${styles.quantityControlButton}`}
@@ -116,7 +116,7 @@ const Home: NextPage = () => {
                 accentColor="#41b9ff"
                 colorMode="dark"
               >
-                Mint #{tokenId} - ($75Z1)
+                Mint #{tokenId} 
               </Web3Button>
             </div>
           </>
