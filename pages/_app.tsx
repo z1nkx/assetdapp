@@ -15,7 +15,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
-          content="Learn How To Use Thirdweb's Edition Drop contract and create a customizable Edition Drop minting page"
+          content="Z1 minting dapp for 3D assets. Assets can be loadable to metaverse AR/VR gallery applications directly from NFT. 
+          These NFTs are mintable with Z1 token and are collectables of Z1nkx's creations on his journey thru this space. 
+          These may come with added utility."
         />
         <meta
           name="keywords"
