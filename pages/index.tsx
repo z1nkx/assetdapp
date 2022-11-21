@@ -98,7 +98,7 @@ const Home: NextPage = () => {
               <button
                 className={`${styles.quantityControlButton}`}
                 onClick={() => setTokenId(tokenId + 1)}
-                disabled={tokenId === 6}
+                disabled={tokenId === 7}
               >
                 +
               </button>
