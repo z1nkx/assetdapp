@@ -82,7 +82,7 @@ const Home: NextPage = () => {
 
           {/* Show claim button or connect wallet button */}
           <>
-            <p>Select NFT - $75Z1</p>
+            <p>Select NFT - 75Z1</p>
             <div className={styles.quantityContainer}>
               <button
                 className={`${styles.quantityControlButton}`}
