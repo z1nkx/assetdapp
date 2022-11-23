@@ -12,7 +12,7 @@ import styles from "../styles/Theme.module.css";
 
 // Put Your Edition Drop Contract address from the dashboard here
 const myEditionDropContractAddress =
-  "0x884881f636FB18F5BACe56A8C0fe4aaB61872289";
+  "0x3B397d021c355970c1B598749b95235cA38b44eA";
 
 // Put your token ID here
 
@@ -116,7 +116,7 @@ const Home: NextPage = () => {
                 accentColor="#41b9ff"
                 colorMode="dark"
               >
-                Mint #{tokenId} 
+                Mint No. {tokenId} 
               </Web3Button>
             </div>
           </>
