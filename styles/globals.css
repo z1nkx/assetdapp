@@ -3,19 +3,19 @@
 /* Change the values in here to match your branding */
 :root {
   /* Background color of the page */
-  --background-color: #060606;
+  --background-color: #000000;
 
   /* Color of the text/words */
   --text-color: #fff;
 
   /* Main color of your brand */
-  --color-primary: #535353;
+  --color-primary: #f213a4;
 
   /* Secondary color of your brand */
-  --color-secondary: #41b9ff;
+  --color-secondary: #418dff;
 
   /* Which font you want to use */
-  --font: "Inter", sans-serif;
+  --font: "Monoid", monospace;
 
   /* Color of the border around items */
   --border-color: rgba(255, 255, 255, 0.5);
@@ -26,14 +26,18 @@
 /* Default design values of the entire document */
 
 body {
-  background: var(--background-color);
-  font-family: var(--font);
-  color: var(--text-color);
-
+  background-image: url('/Store.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  font-family: "Monoid", monospace;
+  color: var(--text-color); /* change from var(--white) to var(--text-color) */
   display: flex;
   margin: 0;
   text-align: center;
 }
+
 
 /* Box sizing rules */
 *,
