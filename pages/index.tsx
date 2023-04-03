@@ -123,12 +123,7 @@ const Home: NextPage = () => {
         </div>
       </div>
       {/* Powered by thirdweb */}{" "}
-      <img
-        src={`/z1logo.jpg`}
-        alt="z1 Logo"
-        width={135}
-        className={styles.buttonGapTop}
-      />
+      
     </div>
   );
 };
