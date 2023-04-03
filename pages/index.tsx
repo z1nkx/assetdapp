@@ -12,7 +12,7 @@ import styles from "../styles/Theme.module.css";
 
 // Put Your Edition Drop Contract address from the dashboard here
 const myEditionDropContractAddress =
-  "0x3B397d021c355970c1B598749b95235cA38b44eA";
+  "0xbAB5bF866924478130A0636CB83d36c8196F4617";
 
 // Put your token ID here
 
@@ -87,7 +87,7 @@ const Home: NextPage = () => {
               <button
                 className={`${styles.quantityControlButton}`}
                 onClick={() => setTokenId(tokenId - 1)}
-                disabled={tokenId <= 0}
+                disabled={tokenId <= 1}
               >
                 -
               </button>
