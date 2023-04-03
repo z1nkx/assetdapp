@@ -116,7 +116,7 @@ const Home: NextPage = () => {
                 accentColor="#41b9ff"
                 colorMode="dark"
               >
-                Mint (${priceToMint})`;
+                Mint (${priceToMint});
               </Web3Button>
             </div>
           </>
