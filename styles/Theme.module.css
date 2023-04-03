@@ -4,12 +4,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100vw;
+  width: 98vw;
+  max-width: 100%;
 }
 
 .previewImage {
-  height: 500px;
-  width: 500px;
+  height: 300px;
+  width: 300px;
   border-radius: 16px;
   border: 1px solid var(--border-color);
   padding: 8px;
@@ -24,9 +25,12 @@
   padding: 0 24px;
   min-height: 720px;
   max-width: 95vw;
-  gap: 2%;
-  border: 1px solid var(--border-color);
-  border-radius: 16px;
+  gap: 20%;
+  border: 3px solid var(--border-color);
+  border-radius: 14px;
+  background-color: rgba(0, 0, 0, 0.8);
+
+
 }
 
 .mintContainer {
@@ -36,7 +40,7 @@
   justify-content: center;
   gap: 10%;
   margin-top: 24px;
-  padding-bottom: 10%
+  margin-bottom: 24px;
 }
 
 .infoSide {
