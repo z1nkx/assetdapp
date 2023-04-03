@@ -23,7 +23,7 @@ const Home: NextPage = () => {
   // The amount the user claims, updates when they type a value into the input field.
   // default to 1
 
-  const [tokenId, setTokenId] = useState<number>(0)
+  const [tokenId, setTokenId] = useState<number>(1)
 
   // Load contract metadata
   const { data: contractMetadata } = useContractMetadata(editionDrop);
@@ -98,7 +98,7 @@ const Home: NextPage = () => {
               <button
                 className={`${styles.quantityControlButton}`}
                 onClick={() => setTokenId(tokenId + 1)}
-                disabled={tokenId === 10}
+                disabled={tokenId === 2}
               >
                 +
               </button>
